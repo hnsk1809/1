@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mixed HTML Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header, footer {
+      background: #004080;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    main {
+      margin-top: 20px;
+    }
+    section {
+      background: white;
+      padding: 15px;
+      margin-bottom: 25px;
+      border-radius: 5px;
+      box-shadow: 0 0 7px #ccc;
+    }
+    h2 {
+      color: #004080;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    form button {
+      margin-top: 15px;
+      background: #004080;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    .portfolio-items {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .portfolio-item {
+      background: #e3f2fd;
+      padding: 15px;
+      border-radius: 5px;
+      flex: 1 1 30%;
+      box-sizing: border-box;
+      box-shadow: 0 0 5px #aaa;
+    }
+    .portfolio-item img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Mixed Content Page</h1>
+    <p>Welcome to a page that combines a form, table, and portfolio</p>
+  </header>
+
+  <main>
+
+    <!-- Form Section -->
+    <section>
+      <h2>Contact Form</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+      <h2>Sample Data Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Widget A</td><td>$10.00</td><td>In stock</td></tr>
+          <tr><td>Widget B</td><td>$15.50</td><td>Out of stock</td></tr>
+          <tr><td>Gadget X</td><td>$25.00</td><td>In stock</td></tr>
+          <tr><td>Gadget Y</td><td>$18.75</td><td>Low stock</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section>
+      <h2>Portfolio</h2>
+      <div class="portfolio-items">
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/300x150?text=Project+1" alt="Project 1" />
+          <h3>Project 1</h3>
+          <p>A cool web design project.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/300x150?text=Project+2" alt="Project 2" />
+          <h3>Project 2</h3>
+          <p>An awesome mobile app.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/300x150?text=Project+3" alt="Project 3" />
+          <h3>Project 3</h3>
+          <p>A powerful data visualization.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Your Name - All rights reserved</p>
+  </footer>
+
+  <script>
+    // Simple form submit handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message, ' + this.name.value + '!');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
